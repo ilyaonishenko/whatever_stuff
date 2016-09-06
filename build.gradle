@@ -30,41 +30,19 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 */
-subprojects{
-    group 'me.training.me'
-    version '1.0-SNAPSHOT'
-
-    apply plugin: 'java'
-
-    sourceCompatibility = 1.8
-    targetCompatibility = 1.8
-
-    repositories {
-        mavenCentral()
-    }
-
-    dependencies {
-        compile 'ch.qos.logback:logback-classic:+'
-        compileOnly 'org.projectlombok:lombok:+'
-        testCompile 'junit:junit:+'
-    }
-
-}
-
 group 'me.training.me'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
-
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
+
     compile 'ch.qos.logback:logback-classic:+'
+    compile 'com.github.spullara.mustache.java:compiler:+'
     compileOnly 'org.projectlombok:lombok:+'
     testCompile 'junit:junit:+'
 }
