@@ -23,11 +23,9 @@ class MonteCarlo {
 
         int firstThrow = ThreadLocalRandom.current().nextInt(1,7);
         int secondThrow = ThreadLocalRandom.current().nextInt(1,7);
-
         Integer answer = firstThrow+secondThrow;
 
         return value -> answer;
-//        return (firstThrow,secondThrow) -> firstThrow+secondThrow;
     }
 
 
