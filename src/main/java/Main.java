@@ -11,5 +11,8 @@ public class Main {
         BinaryOperator<Integer> addInt = (x, y) -> x + y;
 
         System.out.println(addInt.apply(5,5));
+        while (true){
+            System.out.println("Petuh");
+        }
     }
 }
