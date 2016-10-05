@@ -24,7 +24,8 @@ public class Runner {
         System.out.println(Arrays.toString(arrayToSort));
 
 //        MergeSort.sort(arrayToSort);
-        QuickSort.sort(arrayToSort);
+//        QuickSort.sort(arrayToSort);
+        ShellSort.sort(arrayToSort);
 
         System.out.println(Arrays.toString(arrayToSort));
 
