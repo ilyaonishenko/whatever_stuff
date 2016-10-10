@@ -7,8 +7,6 @@ class InsertionSort {
 
     static void sort(int[] a){
 
-        System.out.println("sortings");
-
         int N = a.length;
         for (int i = 1; i < N; i++){
             for(int j = i; j > 0 && a[j] < a[j-1]; j--){
@@ -22,5 +20,6 @@ class InsertionSort {
         int tmp = a[i];
         a[i] = a[j];
         a[j] = tmp;
+        System.out.println("exch "+a[i]+" "+a[j]);
     }
 }
