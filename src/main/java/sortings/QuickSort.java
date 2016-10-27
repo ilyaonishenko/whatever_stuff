@@ -3,14 +3,15 @@ package sortings;
 /**
  * Created by wopqw on 04.10.16.
  */
-public class QuickSort {
+class QuickSort implements Sortings {
 
-    public static void sort(int[] a){
+    @Override
+    public void sort(int[] a){
 
         sort(a,0,a.length-1);
     }
 
-    private static void sort(int[] a, int lo, int hi){
+    private void sort(int[] a, int lo, int hi){
 
         if(hi <= lo)
             return;
@@ -19,7 +20,7 @@ public class QuickSort {
         sort(a,j+1,hi);
     }
 
-    private static int partition(int[] a, int lo, int hi){
+    private int partition(int[] a, int lo, int hi){
 
         int i = lo;
         int j = hi+1;
@@ -36,18 +37,10 @@ public class QuickSort {
                     break;
             if(i >= j)
                 break;
-            exch(a,i,j);
+            swap(a,i,j);
         }
-        exch(a,lo,j);
+        swap(a,lo,j);
         return j;
-    }
-
-    private static void exch(int[] a, int a1, int a2){
-
-        int tmp = a[a1];
-        a[a1] = a[a2];
-        a[a2] = tmp;
-
     }
 
 

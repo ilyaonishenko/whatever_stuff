@@ -3,19 +3,16 @@ package sortings;
 /**
  * Created by wopqw on 03.10.16.
  */
-class MergeSort {
+class MergeSort implements Sortings  {
 
-    private static int[] aux;
+    private int[] aux;
 
-    private static void merge(int[] list, int lo, int mid, int hi){
+    private void merge(int[] list, int lo, int mid, int hi){
 
         int i = lo;
         int j = mid+1;
 
-        for (int k = lo; k <= hi; k++){
-
-            aux[k] = list[k];
-        }
+        System.arraycopy(list, lo, aux, lo, hi + 1 - lo);
 
         for(int k = lo; k <= hi; k++){
 
@@ -30,20 +27,21 @@ class MergeSort {
         }
     }
 
-    private static boolean less(int a, int b){
+    private boolean less(int a, int b){
 
 //        return a.compareTo(b);
 //        return a.compareTo(b) >= 1;
         return a<b;
     }
 
-    public static void sort(int[] a){
+    @Override
+    public void sort(int[] a){
 
         aux = new int[a.length];
         sort(a,0,a.length-1);
     }
 
-    private static void sort(int[] a, int lo, int hi) {
+    private void sort(int[] a, int lo, int hi) {
 
         if(hi <= lo)
             return;
