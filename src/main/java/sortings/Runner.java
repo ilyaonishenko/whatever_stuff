@@ -15,6 +15,7 @@ public class Runner {
     public static void main(String[] args) {
 
         String file1 = "/Users/woqpw/GitHub/java/whatever_stuff/src/main/java/sortings/resources/first.txt";
+        //noinspection unused
         String file2 = "/Users/woqpw/GitHub/java/whatever_stuff/src/main/java/sortings/resources/second.txt";
 
         generateList(file1,10);
@@ -27,13 +28,14 @@ public class Runner {
 //        QuickSort.sort(arrayToSort);
 //        ShellSort.sort(arrayToSort); ????
 //        InsertionSort.sort(arrayToSort);
+        BubbleSort.sort(arrayToSort);
         System.out.println(Arrays.toString(arrayToSort));
 
 
     }
 
     @SneakyThrows
-    static void generateList(String name, int size) {
+    private static void generateList(String name, int size) {
 
         try (Writer writer = new FileWriter(name)) {
 
@@ -49,7 +51,7 @@ public class Runner {
     }
 
     @SneakyThrows
-    static int[] readList (String name){
+    private static int[] readList (String name){
 
         try(BufferedReader br = new BufferedReader(new FileReader(name))){
 
