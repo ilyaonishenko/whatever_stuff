@@ -65,6 +65,15 @@ public class SortTest {
         sortings.sort(arrayToSort);
     }
 
+    @Test
+    public void countingSortTest(){
+        CountingSort cs = new CountingSort();
+        arrayToSort = new Random().ints(10,0,9).toArray();
+        log.info(Arrays.toString(arrayToSort));
+        cs.sort(arrayToSort);
+        log.info(Arrays.toString(arrayToSort));
+    }
+
     @After
     public void finalView() {
         log.info(Arrays.toString(arrayToSort));
