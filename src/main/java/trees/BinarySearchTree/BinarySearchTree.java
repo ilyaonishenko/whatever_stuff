@@ -23,8 +23,8 @@ public class BinarySearchTree {
         while (current.key != key) {
 
             if (current.key < key)
-                current = root.leftChild;
-            else current = root.rightChild;
+                current = current.leftChild;
+            else current = current.rightChild;
 
             if (current == null)
                 return null;
